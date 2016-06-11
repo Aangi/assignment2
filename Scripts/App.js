@@ -3,7 +3,7 @@ Filename : App.js
 @author Aayushi Shah
 @date June 10,2016
 StudentID : 300874124
-website : 
+website : http://assignment2comp.azurewebsites.net/
 @description : This file is the main javascript file for this web site
 */
 /* main javascript file  */
@@ -15,7 +15,7 @@ website :
 
     // define an array of HTML elements
     var paragraphElements = [];
-        //create a reference to the firstname field
+    //create a reference to the firstname field
     var firstName = document.getElementById("firstName");
     //create a reference to the lastname field
     var lastName = document.getElementById("lastName");
@@ -42,6 +42,16 @@ website :
         console.log("*****************************");
 
     
+    if (contactForm){
+    //event listener with inline anonymous event handler function
+    contactForm.addEventListener("submit",function(event){
+        event.preventDefault();
+        showFormInput();
+        contactForm.reset();
+    });
+    }
+
+    function showFormInput() {
 
     paragraphElements[0] = document.getElementById("aboutPara");
     paragraphElements[1] = document.getElementById("projectsPara");
