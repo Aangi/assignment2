@@ -3,7 +3,7 @@ Filename : App.js
 @author Aayushi Shah
 @date June 10,2016
 StudentID : 300874124
-website : http://assignment2comp.azurewebsites.net/
+website : http://finalassignment2.azurewebsites.net/
 @description : This file is the main javascript file for this web site
 */
 /* main javascript file  */
@@ -15,7 +15,16 @@ website : http://assignment2comp.azurewebsites.net/
 
     // define an array of HTML elements
     var paragraphElements = [];
-    //create a reference to the firstname field
+
+    paragraphElements[0] = document.getElementById("aboutPara");
+    paragraphElements[1] = document.getElementById("projectsPara");
+    paragraphElements[2] = document.getElementById("TravellingPara");
+    paragraphElements[3] = document.getElementById("PaintingPara");
+    
+    // define your paragraphs array
+    var paragraphs = [];
+
+        //create a reference to the firstname field
     var firstName = document.getElementById("firstName");
     //create a reference to the lastname field
     var lastName = document.getElementById("lastName");
@@ -29,6 +38,16 @@ website : http://assignment2comp.azurewebsites.net/
     //create a reference to the form
     var contactForm = document.getElementById("contactForm");
 
+    if (contactForm){
+    //event listener with inline anonymous event handler function
+    contactForm.addEventListener("submit",function(event){
+        event.preventDefault();
+        showFormInput();
+        contactForm.reset();
+    });
+    }
+
+    function showFormInput() {
         console.log("*****************************");
         console.log("First Name: "+firstName.value);
         console.log("*****************************");
@@ -41,27 +60,7 @@ website : http://assignment2comp.azurewebsites.net/
         console.log("Message: "+message.value);
         console.log("*****************************");
 
-    
-    if (contactForm){
-    //event listener with inline anonymous event handler function
-    contactForm.addEventListener("submit",function(event){
-        event.preventDefault();
-        showFormInput();
-        contactForm.reset();
-    });
     }
-
-    function showFormInput() {
-
-    paragraphElements[0] = document.getElementById("aboutPara");
-    paragraphElements[1] = document.getElementById("projectsPara");
-    paragraphElements[2] = document.getElementById("TravellingPara");
-    paragraphElements[3] = document.getElementById("PaintingPara");
-    
-    // define your paragraphs array
-    var paragraphs = [];
-
-    
 
 
     // data for my pages
