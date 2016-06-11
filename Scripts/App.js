@@ -15,6 +15,33 @@ website :
 
     // define an array of HTML elements
     var paragraphElements = [];
+        //create a reference to the firstname field
+    var firstName = document.getElementById("firstName");
+    //create a reference to the lastname field
+    var lastName = document.getElementById("lastName");
+    //create a reference to the email field
+    var email = document.getElementById("email");
+    //create a reference to the contactNumber field
+    var contactNumber = document.getElementById("contactNumber");
+    //create a reference to the message field
+    var message = document.getElementById("message");
+
+    //create a reference to the form
+    var contactForm = document.getElementById("contactForm");
+
+        console.log("*****************************");
+        console.log("First Name: "+firstName.value);
+        console.log("*****************************");
+        console.log("Last Name: "+lastName.value);
+        console.log("*****************************");
+        console.log("Email: "+email.value);
+        console.log("*****************************");
+        console.log("Contact Number: "+contactNumber.value);
+        console.log("*****************************");
+        console.log("Message: "+message.value);
+        console.log("*****************************");
+
+    
 
     paragraphElements[0] = document.getElementById("aboutPara");
     paragraphElements[1] = document.getElementById("projectsPara");
